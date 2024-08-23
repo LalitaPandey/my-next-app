@@ -14,5 +14,23 @@ module.exports = {
       },
     },
   },
+  theme: {
+    extend: {
+      fontFamily: {
+        worksans: ['Work Sans', 'sans-serif'],
+      },
+    },
+  },
   plugins: [],
+  theme: {
+    extend: {
+      fontFamily: {
+        staatliches: ['Staatliches', 'sans-serif'],
+      },
+    },
+  },
+  plugins: [],
+ 
 };
+
+

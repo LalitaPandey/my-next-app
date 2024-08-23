@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -17,17 +18,1021 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-[#2C394B];
+  max-width: 100%;
+  color: white; /* Optional: Set text color to white for contrast */
+}
+html {
+  scroll-behavior: smooth;
+  
+}
+.nav{
+  width: 100%;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+/* styles.css */
+.link-container {
+  position: relative;
+}
+
+.link-underline {
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Adjust based on your link's font size */
+  width: 100%;
+  height: 2px; /* Adjust based on desired underline thickness */
+  background-color: #074292; /* Adjust based on your desired color */
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+}
+
+.link-container:hover .link-underline {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+/* Define the custom animation */
+@keyframes scroll-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Define the gradient text */
+/* Define the keyframes for gradient text animation */
+/* Define the keyframes for gradient text animation */
+/* Define the keyframes for gradient text animation */
+/* Define the keyframes for gradient text animation */
+
+
+/* Apply gradient animation to text */
+.text-gradient {
+  background: linear-gradient(96.3deg, #074292 -5.84%, #ffffff 31.44%, #78A5FF 65.78%, #ffffff 83.46%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient-change 10s ease-in-out infinite;
+}
+/* global.css */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee {
+ 
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 20s linear infinite;
+}
+
+
+.bg-custom-gradient {
+  background: linear-gradient(to top right, black 70%, transparent 100%),
+              radial-gradient(circle at top right, #83A0C8, transparent);
+}
+
+
+/* Apply animation with Tailwind's @apply directive */
+.animate-scroll-up {
+  @apply transition-opacity transition-transform;
+  animation: scroll-up 1s ease-out;
+  animation-delay: 0.5s; /* Adjust delay as needed */
+}
+/* styles/globals.css */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #C13584, #E1306C, #F77737, #FCAF45);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes rotateOut {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+  100% {
+    transform: rotate(180deg) translateY(-100%);
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(180deg) translateY(100%);
+  }
+  100% {
+    transform: rotate(0deg) translateY(0);
+  }
+}
+
+.animate-rotate-out {
+  animation: rotateOut 0.6s forwards;
+}
+.animate-rotate-in {
+  animation: rotateIn 0.6s forwards;
+}
+/* globals.css or a similar global stylesheet */
+.custom-bubblegum-text {
+  font-family: 'Bubblegum Sans', cursive; /* Fallback to cursive if the font is not available */
+}
+
+.fontClass {
+   font-family: "Staatliches";
+}
+.fontPara{
+  font-family: "Work Sans";
+}
+
+.fontHead{
+  font-family: "Work Sans";
+font-size: 40px;
+font-weight: 600;
+line-height: 70px;
+letter-spacing: 0.02em;
+text-align: center;
+}
+.HighLights{
+  font-family: "Staatliches";
+font-size: 56px;
+font-weight: 400;
+line-height: 70px;
+letter-spacing: 0.02em;
+
+}
+.heighlightinside{
+  border-radius: 3rem;
+}
+.date{
+  font-family: "Work Sans";
+font-size: 23px;
+font-weight: 400;
+line-height: 26.98px;
+text-align: left;
+color: black;
+}
+.hightlights-Head{
+  font-family: "Staatliches";
+font-size: 35px;
+font-weight: 400;
+line-height: 43.75px;
+text-align: left;
+color: black;
+letter-spacing: 0.02em;
+}
+
+.hightlights-Headtwo{
+  font-family: "Staatliches";
+font-size: 22px;
+font-weight: 400;
+line-height: 30px;
+text-align: left;
+color:white;
+letter-spacing: 0.02em;
+}
+.proCard{
+  width:80%;
+}
+
+.productDesc{
+position: absolute;
+width: 100%;
+height: 100%;
+left: 460px;
+top: 60px;
+
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 300;
+font-size: 17px;
+line-height: 130%;
+/* or 22px */
+text-align: justify;
+
+color: #2C394B;
+
+}
+
+.titlehead{
+  /* Car Interceptor */
+/* 
+position: absolute; */
+width: 174px;
+height: 28px;
+left: 460px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: -0.02em;
+color: #2C394B;
+white-space: nowrap;
+overflow: hidden;
+}
+.buttonPro{
+  width: 50px;
+height: 50px;
+gap: 0px;
+border-radius: 100px;
+justify: space-between;
+opacity: 0px;
+margin-bottom: 20px;
+}
+.productCard{
+min-width:100%;
+height: 100%;
+background: #FFFFFF;
+border-radius: 20px;
+margin: auto;
+}
+
+.proImage{
+  /* 1 */
+width: 408px;
+height: 315px;
+left: 20px;
+top: 32px;
+border-radius: 20px;
+margin:auto;
+
+}
+.proHead{
+  /* Car Interceptor */
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 28px;
+letter-spacing: -0.02em;
+color: #2C394B;
+
+
+}
+@keyframes slide-out-left-rotate {
+  0% {
+    transform: translate(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100%) rotate(-32deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-right-rotate {
+  0% {
+    transform: translateY(100%) rotate(32deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+
+.border-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0px solid black;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  transition: all 0.5s ease-in-out;
+}
+
+
+button:hover .border-animation {
+  border-left-color: black;
+  border-right-color: black;
+  left: 50%;
+  right: 50%;
+}
+
+.careerbutton:hover .border-top {
+  height: 4px; /* Adjust according to the desired thickness */
+  width: 100%; /* Extend to the full width */
+  background-color: #A8EB12; /* Green color on hover */
+}
+.careerbutton:hover .border-bottom {
+  height: 4px; /* Adjust according to the desired thickness */
+  width: 100%; /* Extend to the full width */
+  background-color: #A8EB12; /* Green color on hover */
+}
+.careerbutton:hover .border-left {
+  width: 4px; /* Adjust according to the desired thickness */
+  height: 100%; /* Extend to the full height */
+  background-color: #A8EB12; /* Green color on hover */
+}
+.careerbutton:hover .border-right {
+  width: 4px; /* Adjust according to the desired thickness */
+  height: 100%; /* Extend to the full height */
+  background-color: #A8EB12; /* Green color on hover */
+}
+/* careerinputfield */
+input {
+  border: 2px solid transparent; /* Set a solid border to make space for the gradient border */
+  border-image-source: linear-gradient(90deg, #83A0C8 20%, #A8EB12 100%);
+  border-image-slice: 1; /* This makes the gradient border visible */
+  /* Styling for placeholder text */
+  color: transparent; /* Hide the default text color */
+
+  background-clip: text; /* Clip the background to the text */
+  -webkit-background-clip: text; /* For WebKit browsers */
+  
+  /* Additional styling */
+  padding: 8px; /* Add some padding for better appearance */
+  outline: none; /* Remove default outline */
+  
+}
+
+.careerbutton {
+  position: relative;
+  z-index: 1;
+  background-color: #A8EB12;
+  color:  #2C394B;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+.careerbutton:hover {
+  background-color: transparent;
+  color: white;
+ 
+} 
+
+.border-top,
+.border-bottom,
+.border-left,
+.border-right {
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover .border-top {
+  width: 100%;
+}
+
+button:hover .border-bottom {
+  width: 100%;
+}
+
+button:hover .border-left {
+  height: 100%;
+}
+
+button:hover .border-right {
+  height: 100%;
+}
+
+
+.Career-img>img{
+  min-width: 100%;
+}
+.gradient-Input {
+  background: linear-gradient(to right, #83A0C8 10%, #A8EB12); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: "Work Sans";
+ 
+}
+/* Global Styles */
+
+
+@keyframes slide-out-right-rotate {
+ 0% {
+    transform: translateY(100%) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0%) rotate(-32deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-left-rotate {
+  0% {
+    transform: translateY(-100%) rotate(32deg);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+}
+
+.animate-slide-out-left-rotate {
+  animation: slide-out-left-rotate 0.8s forwards;
+}
+
+.animate-slide-in-right-rotate {
+  animation: slide-in-right-rotate 0.8s forwards;
+}
+
+.animate-slide-out-right-rotate {
+  animation: slide-out-right-rotate 0.8s forwards;
+}
+
+.animate-slide-in-left-rotate {
+  animation: slide-in-left-rotate 0.8s forwards;
+}
+
+
+/* navbar */
+/* Dropdowns links */
+
+.Dropdown{
+height:380px;
+width: 300px;
+background-color: #FFFFFF;
+padding: 10px 10px 10px 0px;
+gap: 14px;
+border-radius: 10px;
+border: 0.5px solid #83A0C8;
+opacity: 0px;
+font-family: "Work Sans";
+font-size: 23px;
+font-weight: 500;
+line-height: 28.46px;
+text-align: left;
+box-shadow: 0px 7px 15px 0px #4D4D4D1A;
+
+}
+/* Add this to your CSS file or within a <style> block */
+.about-dropdown {
+  height: 150px;
+  width: 300px;
+background-color: #FFFFFF;
+padding: 10px 10px 10px 0px;
+gap: 14px;
+border-radius: 10px;
+border: 0.5px solid #83A0C8;
+opacity: 0px;
+font-family: "Work Sans";
+font-size: 23px;
+font-weight: 500;
+line-height: 28.46px;
+text-align: left;
+box-shadow: 0px 7px 15px 0px #4D4D4D1A;/* Allows scrolling if content overflows */
+}
+
+.menu-item {
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-item:hover {
+  transform: translateX(8px); /* Adjust the value as needed */
+}
+.flex-wrap-responsive {
+  display: flex;
+  justify-content: center;
+ /* Equivalent to Tailwind's pt-24 */
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.flex-wrap-responsive div {
+  display: inline-block;
+  border: 2px dashed;
+  border-radius: 50%;
+  margin:1rem;
+  padding: 0.75rem; /* Equivalent to Tailwind's p-3 */
+  background-color: white;
+  text-align: center;
+}
+
+.fontMainheading{
+  font-family: "Staatliches";
+  font-size: 3rem;
+  text-align: center;
+
+}
+
+/* partners */
+.addmore{
+  font-family: "Staatliches";
+  font-size: 20px;
+  color:#83A0C8;
+}
+/* Tailwind CSS */
+/* Footeranimation */
+@keyframes move {
+  0% {
+    top: 0;
+    left: 0;
+  }
+  20% {
+    top: 10%;
+    left: 70%;
+  }
+  40% {
+    top: 50%;
+    left: 30%;
+  }
+  60% {
+    top: 30%;
+    left: 80%;
+  }
+  80% {
+    top: 60%;
+    left: 10%;
+  }
+  100% {
+    top: 0;
+    left: 50%;
+  }
+}
+.hamburgertext{
+
+}
+
+.hamburgerlink{
+  font-family: "Work Sans";
+  color: #074292;
+  font-size: 4rem;
+  padding:12rem;
+}
+.animate-move {
+  animation: move 10s linear infinite;
+}
+.productfont{
+  font-size: 3.5rem;
+  color:#78A5FF;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.navmobile{
+  height: 97%;
+  overflow: hidden;
+}
+
+.partnerlogo>div>img{
+  width:100px;
+  height: 100px;
+margin:20px;
+}
+
+
+/* careerpage */
+.careerhead{
+  font-size: 20px;
+  font-family: "Work Sans";
+
+}
+.careerfont{
+
+  border-width: 2px 0 2px 2px; /* Top, right, bottom, left */
+border-style: solid;
+border-color: #83A0C8;
+border-radius: 20px 0px 0px 20px; /* Top-left, top-right, bottom-right, bottom-left */
+
+  
+}
+
+/* gallery page */
+.gallerysection{
+  height: 100vh;
+}
+
+.heighlightinside:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.8);
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3));
+}
+@media screen and (max-width: 767px) {
+  /* CSS rules for mobile screens go here */
+  body {
+      background-color: #2C394B;
+      min-width:362%;
+  }
+
+  /* .container {
+      padding: 10px;
+  } */
+  .header {
+      font-size: 1.5em;
+  }
+ .Headerlogo>img{
+    width:400px;
+  }
+  .fontPara{
+    font-size: 45px;
+    line-height: 60px;
+  }
+  /* mainheadingweb */
+.nextgenheading{
+  height: 220vh;
+}
+.trending-today{
+  font-size: 5rem;
+}
+.trendingfont{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  height:100%;
+  font-size:2.6rem;
+  border-radius: 50px;
+  padding:20px 22px 22px 20px;
+
+}
+  .fontClass{
+    font-size: 8rem;
+  }
+  .fontMainheading{
+    font-family: "Staatliches";
+    font-size: 6rem;
+    text-align: center;
+  
+  }
+/* trending today  */
+.treandingProduct{
+  justify-content: center;
+  margin-top: 50px;
+}
+.trendingHead{
+
+display:flex;
+flex-direction: column;
+}
+
+.trendinghead{
+  display: flex;
+  justify-content: center;
+}
+.Imagetooltip{
+  min-width:400px;
+  height:450px;
+ 
+}
+.Radarfont{
+  font-size: 2rem;
+  line-height: 28px;
+  padding: 1rem;
+  white-space:wrap ;
+}
+/* our clients */
+  .flex-wrap-responsive {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 5px;
+    flex-wrap: wrap;
+    margin-top:5rem;
+  }
+  
+  .flex-wrap-responsive div {
+    display: inline-block;
+    border: 2px#83A0C8 dashed;
+    border-radius: 50%;
+    margin:0.2rem;
+    padding: 1rem; /* Equivalent to Tailwind's p-3 */
+    background-color: white;
+    text-align: center;
+   
+  }
+  .responsive-image {
+    width: 260px;
+    height: 260px;
+  }
+
+/* what stats says */
+
+.mainCard{
+  display: table-column;
+}
+.seeCard{
+  height:auto;
+}
+.mainCardtwo{
+  min-width:600px;
+ height:100%;
+margin:80px;
+padding: 140px 50px 140px 50px;
+
+}
+.cardFont{
+  font-size: 4rem;
+}
+.cardFonttwo{
+  font-size:2rem;
+}
+
+/* featuredcard */
+
+.productCard{
+  min-width:100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 20px;
+  margin: auto;
+ 
+  }
+  .proImage{
+    /* 1 */
+  width: 408px;
+  height: 315px;
+  left: 20px;
+  top: 32px;
+  border-radius: 20px;
+  
+  }
+.proCard{
+  max-width:100%;
+  max-height:100%;
+ 
+
+}
+.productmaindiv{
+  margin-top:0px;
+  margin-left: 0px;
+}
+
+.productheading>p{
+  width:100%;
+  height: 100%;
+  padding: 2rem;
+  font-size: 3rem;
+  margin:5px;
+
+}
+.productresp{
+width:100%;
+padding: 24px;
+}
+.buttonPro{
+  width:100px;
+  height:100px;
+  gap: 12px;
+}
+.buttonPro>img{
+  width:30px;
+  height:40px;
+}
+.productresp>img{
+  width:100%;
+  height:auto;
+}
+/* partners */
+.partnerhead{
+  text-align: center;
+  padding: 20px;
+}
+.partnerSection {
+  display: inline-block;
+  margin: auto;
+text-align: center;
+}
+.partermaindiv{
+  margin-top: 8rem;
+}
+.partnerlogo{
+  width:100%;
+  height:100%;
+  display:flex;
+  /* flex-wrap: wrap; */
+  justify-content: center;
+ margin-top:20px;
+}
+.addmore{
+  font-family: "Work Sans";
+  font-size: 30px;
+  color:#83A0C8;
+}
+.partnerlogo>div>img{
+  width:260px;
+  height: 260px;
+margin:20px;
+}
+  .heighlightsimg{
+    display: block;
+    
+  }
+  .heightlightssec{
+    width:100%;
+padding: 5rem;
+gap: 10rem;
+  }
+.HighLights{
+ font-size: 20px;
+ display: flex;
+    text-align: center;
+  justify-content: center;
+}
+.HighLights>button{
+  font-size: 3rem;
+}
+.hightlights-Headtwo{
+  font-size: 3rem;
+ 
+}
+/* dropdownfaq */
+.droppara{
+  font-size: 40px;
+}
+/* career page */
+.career-form {
+  margin-top:6rem;
+  line-height: 6rem;
+}
+.Main-inputfield{
+  min-width:90%;
+height:100vh;
+}
+.careerbutton{
+  font-size: 4rem;
+  padding:2.8rem;
+  margin-top: 4rem;
+
+}
+.careerhead{
+font-size: 2.9rem;
+line-height: 3rem;
+margin-top:6rem;
+}
+
+.gradient-Input{
+  font-size: 2.6rem;
+}
+  /* footerresponsive */
+  .footerres{
+    width:100%;
+    height: 100%;
+ padding: 1rem;
+    display: inline-block;
+   
+   
+  }
+
+  .footermain{
+    padding-top: 30rem;
+  }
+  .footerone
+  {
+    width:100%;
+    height:100%;
+    margin-bottom: 20px ;
+    padding: 4.4rem;
+    border-radius: 5rem;
+  }
+  .circularDiv{
+    width:400px;
+    height:400px;
+  }
+  .footertwo{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:100%;
+    padding:30px;
+   flex-wrap: wrap;
+   border-radius: 5rem;
+   
+  }
+  .footHeadingone{
+    font-size: 4.5rem;
+   
+  }
+  .footHeadingtwo{
+    font-size: 3.2rem;
+  }
+  .Headingadd {
+    font-size: 2.6rem;
+    margin-top: 16rem;
+  }
+  .footertext{
+    padding: 2px;
+    line-height: 58px;
+    min-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+  }
+
+.footerfont{
+ font-family: "Work Sans";
+    font-size: 40px;
+   font-weight: 500;
+   white-space: nowrap;
+
+  }
+
+
+  /* dropdownHead */
+.dropdownHead{
+  font-size: 2.5rem;
+}
+.dropplus>img{
+  width:50px;
+}
+/* gallerysectionres */
+.gallerysection{
+  height: 200vh;
+}
+}
+@media screen and (min-width: 900px) {
+  .responsive-image {
+    width: 100px;
+    height: 100px;
+  }
+  .flex-wrap-responsive div {
+    display: inline-block;
+    border: 2px#83A0C8 dashed;
+   
+  }
+  .flex-wrap-responsive {
+  
+    display: flex;
+    justify-content: center;
+ 
+    padding-top: 2rem; /* Equivalent to Tailwind's pt-24 */
+    flex-wrap: wrap;
+    margin: 2px;
+   
+  }
+  /* career page */
+  .careeractive{
+   font-size: 40px;
+  }
+}
+
+
+/* gallery page */
+
+
+@media (min-width: 320px) and (max-width: 400px) {
+  .responsive-image {
+    width: 230px;
+    height: 230px;
+  }
+
+}
+/* table responsive */
+
+@media (min-width: 767px) and (max-width: 1025px) {
+  body {
+  min-width: 129%;
+  }
+  .proCard{
+    width:95%;
+  }
+  .treandingProduct{
+    justify-content: center;
+  }
+  .footertwo{
+    padding: 0.5rem;
+  }
+  .hightlights-Headtwo{
+    font-size: 12px;
+   
+  }
+  .heighlighthover{
+    padding: 1rem;
+    box-shadow: #2C394B;
+  }
+  .flex-wrap-responsive{
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: auto;
+  }
+  .flex-wrap-responsive div{
+    display: inline-block;
+    border: 1px dashed #2C394B;
+    border-radius: 50%;
+    margin: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+  }
+.footerfont{
+  font-size: 13px;
+}
 }

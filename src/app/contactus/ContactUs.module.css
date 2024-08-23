@@ -1,0 +1,198 @@
+.contactUs {
+    text-align: center;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .contactdetails{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .contactdetails>h1{
+    font-family: "Work Sans";
+font-size: 28px;
+font-weight: 400;
+line-height: 32.84px;
+letter-spacing: -0.07em;
+color: #83A0C8;
+
+
+  }
+  .contactdetails>h3{
+    font-family: Staatliches;
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 90px;
+   
+    color:white;
+  }
+  .contactdetails>p{
+    font-family: Work Sans;
+font-size: 20px;
+font-weight: 400;
+line-height: 23.46px;
+color: #83A0C8;
+
+  } 
+  .heading {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+    font-size: 5rem;
+    text-align: center;
+    font-family: "Staatliches";
+    opacity: 1;
+    transition: opacity 1s;
+  }
+  
+  .middleSection {
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 4rem;
+    position: absolute;
+    top: 100%; /* Start below the viewport */
+    left: 0;
+    background-color: transparent; /* No background initially */
+    padding: 20px;
+    text-align: center;
+    font-family: "Staatliches";
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 1s, top 1s; /* Transition for opacity and top property */
+  }
+  
+  .middleSectionWithBackground {
+    background-color: black; /* Black background during animation */
+  }
+  
+  .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    font-family: "Staatliches";
+    opacity: 0;
+    z-index: 3; /* Ensure it appears above other sections */
+    transition: opacity 1s;
+  }
+  .formheadd{
+    font-family: "Work Sans";
+font-size: 20px;
+font-weight: 400;
+line-height: 23.46px;
+letter-spacing: -0.07em;
+text-align: left;
+color:white;
+  }
+  .formheadtwo{
+/* Connect with us here */
+width: 200px;
+height: 30px;
+font-family: 'Staatliches';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 30px;
+/* identical to box height */
+letter-spacing: 0.02em;
+color: #FFFFFF;
+margin-top: 1rem;
+  }
+  .formlocation{
+   /* Location */
+
+width: 87px;
+height: 26px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 22px;
+line-height: 26px;
+/* identical to box height */
+letter-spacing: -0.04em;
+
+color: #F7F7F7;
+
+
+  }
+  .forminfo{
+    /* Dwarka, New Delhi India */
+
+width: 199px;
+height: 21px;
+font-family: 'Work Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 21px;
+letter-spacing: -0.04em;
+white-space: nowrap;
+
+color: #F7F7F7;
+
+
+  }
+  .hidden {
+    opacity: 0;
+  }
+  .input {
+    border: 2px solid transparent; /* Set a solid border to make space for the gradient border */
+    border-image-source: linear-gradient(90deg, #83A0C8 20%, #9a9c94 100%);
+    border-image-slice: 1; /* This makes the gradient border visible */
+    /* Styling for placeholder text */
+    color: transparent; /* Hide the default text color */
+  
+    background-clip: text; /* Clip the background to the text */
+    -webkit-background-clip: text; /* For WebKit browsers */
+    
+    /* Additional styling */
+    padding: 8px; /* Add some padding for better appearance */
+    outline: none; /* Remove default outline */
+    
+  }
+  .show {
+    opacity: 1;
+  }
+  
+  .slideUp {
+    animation: slideUp 2s forwards;
+  }
+  
+  .slideOut {
+    animation: slideOut 1s forwards;
+  }
+  
+  @keyframes slideUp {
+    from {
+      top: 100%; /* Start from below the viewport */
+      background-color: transparent ; /* No background color initially */
+    }
+    to {
+      top: 50%; /* Move to the middle of the viewport */
+     /* Background color during animation */
+    }
+  }
+  
+  @keyframes slideOut {
+    from {
+      top: 0%; /* Start from the middle of the viewport */
+    }
+    to {
+      top: -100%; /* Move out of the viewport */
+      opacity: 0;
+    }
+  }
+  
